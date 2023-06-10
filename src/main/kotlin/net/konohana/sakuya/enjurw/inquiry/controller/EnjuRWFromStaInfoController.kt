@@ -13,6 +13,14 @@ import net.konohana.sakuya.enjurw.inquiry.models.fromsta.EnjuRW05FromStaInfo
 import net.konohana.sakuya.enjurw.inquiry.models.fromsta.EnjuRW06FromStaInfo
 import net.konohana.sakuya.enjurw.inquiry.models.fromsta.EnjuRW07FromStaInfo
 import net.konohana.sakuya.enjurw.inquiry.models.fromsta.EnjuRW08FromStaInfo
+import net.konohana.sakuya.enjurw.inquiry.models.fromsta.EnjuRW09FromStaInfo
+import net.konohana.sakuya.enjurw.inquiry.models.fromsta.EnjuRW10FromStaInfo
+import net.konohana.sakuya.enjurw.inquiry.models.fromsta.EnjuRW11FromStaInfo
+import net.konohana.sakuya.enjurw.inquiry.models.fromsta.EnjuRW12FromStaInfo
+import net.konohana.sakuya.enjurw.inquiry.models.fromsta.EnjuRW13FromStaInfo
+import net.konohana.sakuya.enjurw.inquiry.models.fromsta.EnjuRW14FromStaInfo
+import net.konohana.sakuya.enjurw.inquiry.models.fromsta.EnjuRW15FromStaInfo
+import net.konohana.sakuya.enjurw.inquiry.models.fromsta.EnjuRW16FromStaInfo
 import org.jetbrains.exposed.sql.SchemaUtils
 import org.jetbrains.exposed.sql.transactions.transaction
 
@@ -81,6 +89,70 @@ fun Route.enjuRWFromStaInfoController() {
                         SchemaUtils.create(EnjuRW08FromStaInfo)
                     }
                     call.respond(mapOf("Created:" to "EnjuRW08FromStaInfo"))
+                }
+            }
+            route("enjurw09fromstainfo") {
+                post {
+                    transaction {
+                        SchemaUtils.create(EnjuRW09FromStaInfo)
+                    }
+                    call.respond(mapOf("Created:" to "EnjuRW09FromStaInfo"))
+                }
+            }
+            route("enjurw10fromstainfo") {
+                post {
+                    transaction {
+                        SchemaUtils.create(EnjuRW10FromStaInfo)
+                    }
+                    call.respond(mapOf("Created:" to "EnjuRW10FromStaInfo"))
+                }
+            }
+            route("enjurw11fromstainfo") {
+                post {
+                    transaction {
+                        SchemaUtils.create(EnjuRW11FromStaInfo)
+                    }
+                    call.respond(mapOf("Created:" to "EnjuRW11FromStaInfo"))
+                }
+            }
+            route("enjurw12fromstainfo") {
+                post {
+                    transaction {
+                        SchemaUtils.create(EnjuRW12FromStaInfo)
+                    }
+                    call.respond(mapOf("Created:" to "EnjuRW12FromStaInfo"))
+                }
+            }
+            route("enjurw13fromstainfo") {
+                post {
+                    transaction {
+                        SchemaUtils.create(EnjuRW13FromStaInfo)
+                    }
+                    call.respond(mapOf("Created:" to "EnjuRW13FromStaInfo"))
+                }
+            }
+            route("enjurw14fromstainfo") {
+                post {
+                    transaction {
+                        SchemaUtils.create(EnjuRW14FromStaInfo)
+                    }
+                    call.respond(mapOf("Created:" to "EnjuRW14FromStaInfo"))
+                }
+            }
+            route("enjurw15fromstainfo") {
+                post {
+                    transaction {
+                        SchemaUtils.create(EnjuRW15FromStaInfo)
+                    }
+                    call.respond(mapOf("Created:" to "EnjuRW15FromStaInfo"))
+                }
+            }
+            route("enjurw16fromstainfo") {
+                post {
+                    transaction {
+                        SchemaUtils.create(EnjuRW16FromStaInfo)
+                    }
+                    call.respond(mapOf("Created:" to "EnjuRW16FromStaInfo"))
                 }
             }
         }
