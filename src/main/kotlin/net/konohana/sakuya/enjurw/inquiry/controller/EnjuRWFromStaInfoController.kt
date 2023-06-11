@@ -21,6 +21,9 @@ import net.konohana.sakuya.enjurw.inquiry.models.fromsta.EnjuRW13FromStaInfo
 import net.konohana.sakuya.enjurw.inquiry.models.fromsta.EnjuRW14FromStaInfo
 import net.konohana.sakuya.enjurw.inquiry.models.fromsta.EnjuRW15FromStaInfo
 import net.konohana.sakuya.enjurw.inquiry.models.fromsta.EnjuRW16FromStaInfo
+import net.konohana.sakuya.enjurw.inquiry.models.fromsta.EnjuRW17FromStaInfo
+import net.konohana.sakuya.enjurw.inquiry.models.fromsta.EnjuRW18FromStaInfo
+import net.konohana.sakuya.enjurw.inquiry.models.fromsta.EnjuRW19FromStaInfo
 import org.jetbrains.exposed.sql.SchemaUtils
 import org.jetbrains.exposed.sql.transactions.transaction
 
@@ -153,6 +156,30 @@ fun Route.enjuRWFromStaInfoController() {
                         SchemaUtils.create(EnjuRW16FromStaInfo)
                     }
                     call.respond(mapOf("Created:" to "EnjuRW16FromStaInfo"))
+                }
+            }
+            route("enjurw17fromstainfo") {
+                post {
+                    transaction {
+                        SchemaUtils.create(EnjuRW17FromStaInfo)
+                    }
+                    call.respond(mapOf("Created:" to "EnjuRW17FromStaInfo"))
+                }
+            }
+            route("enjurw18fromstainfo") {
+                post {
+                    transaction {
+                        SchemaUtils.create(EnjuRW18FromStaInfo)
+                    }
+                    call.respond(mapOf("Created:" to "EnjuRW18FromStaInfo"))
+                }
+            }
+            route("enjurw19fromstainfo") {
+                post {
+                    transaction {
+                        SchemaUtils.create(EnjuRW19FromStaInfo)
+                    }
+                    call.respond(mapOf("Created:" to "EnjuRW19FromStaInfo"))
                 }
             }
         }
