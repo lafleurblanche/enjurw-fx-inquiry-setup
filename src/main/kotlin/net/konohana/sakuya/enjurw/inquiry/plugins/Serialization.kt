@@ -8,6 +8,7 @@ import io.ktor.server.application.install
 import io.ktor.server.plugins.contentnegotiation.ContentNegotiation
 import io.ktor.server.routing.routing
 import net.konohana.sakuya.enjurw.inquiry.router.enjuRWFromSTaInfoRouter
+import net.konohana.sakuya.enjurw.inquiry.router.enjuRWToStaInfoRouter
 
 fun Application.configureSerialization() {
     install(ContentNegotiation) {
@@ -18,5 +19,6 @@ fun Application.configureSerialization() {
     }
     routing {
         enjuRWFromSTaInfoRouter()
+        enjuRWToStaInfoRouter()
     }
 }
